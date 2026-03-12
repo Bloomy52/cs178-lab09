@@ -23,6 +23,8 @@ def print_movie(movie):
     title = movie.get("Title", "Unknown Title")
     year = movie.get("Year", "Unknown Year")
     ratings = movie.get("Ratings", "No ratings")
+    genres = movie.get("Genre", "No genres")
+    runtime = movie.get("Runtime (min)", "Unknown Runtime")
     
     # Ratings is a nested map in the table — handle it gracefully
     #ratings = movie.get("Ratings", {})
@@ -31,7 +33,9 @@ def print_movie(movie):
     print(f"  Title : {title}")
     print(f"  Year  : {year}")
     print(f"  Ratings: {ratings}")
-    print()
+    print(f"  Genres: {genres}")
+    print(f"  Runtime: {runtime} min")
+    print(f"                ")
 
 
 def print_all_movies():
